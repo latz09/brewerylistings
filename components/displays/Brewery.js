@@ -13,7 +13,7 @@ const Brewery = ({
 }) => {
 	return (
 		<motion.div
-			className='grid gap-8 shadow-lg text-light   py-8 px-4 rounded backdrop-blur bg-[#F27C02]/30 mx-2 lg:mx-0'
+			className='grid gap-16 shadow-lg text-light   py-8 px-4 rounded backdrop-blur bg-[#F27C02]/10 mx-2 lg:mx-0'
 			initial={{ opacity: 0, scale: 0.9 }}
 			whileInView={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 1 }}
@@ -23,8 +23,8 @@ const Brewery = ({
 				<FiveStars />
 			</div>
 			<div className='lg:hidden w-full h-full p-20 grid  place-items-center bg-light/60 shadow-md'>
-					MAP
-				</div>
+				MAP
+			</div>
 			<div className='lg:flex gap-8 '>
 				<div className='flex justify-between lg:grid gap-16'>
 					<BreweryDetails name={name} type={type} street={street} />
@@ -50,17 +50,25 @@ export default Brewery;
 
 const BreweryTitle = ({ name }) => {
 	return (
-		<div className='text-3xl opacity-90'>
-			<div className='text-2xl lg:text-3xl font-semibold lg:scale-y-110 '>{name}</div>
-		</div>
+		<motion.div className='text-3xl opacity-90'
+			initial={{ opacity: 0, scale: 0.9 }}
+			whileInView={{ opacity: 1, scale: 1 }}
+			transition={{ duration: 1 }}
+		>
+			<div className='text-2xl lg:text-3xl font-semibold lg:scale-y-110 '>
+				{name}
+			</div>
+		</motion.div>
 	);
 };
 
 const BreweryDetails = ({ name, type, street }) => {
 	return (
-		<div className='text-lg   opacity-70 grid gap-2 '>
-			<div className='opacity-90 font-bold '>{street}</div>
-			<div className='opacity-90 text-base font-bold'>{'1.4'} miles away</div>
+		<div className='text-lg text-secondary  tracking-widest grid gap-2 '>
+			<div className='font-semibold tracking-wid  '>{street}</div>
+			<div className=' text-base font-bold  text-primary'>
+				{'1.4'} miles away
+			</div>
 		</div>
 	);
 };
@@ -71,15 +79,15 @@ const FiveStars = () => {
 		<>
 			<div className='flex space-x-2 '>
 				{stars.map((s, i) => (
-					<div
+					<motion.div
 						key={i}
 						className='text-primary text-xl lg:text-3xl'
 						initial={{ opacity: 0, scale: 0 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1.3, delay: 0.2 * i }}
 					>
-						<div
-							initial={{ scale: 0.75, opacity: 0.85 }}
+						<motion.div
+							initial={{ scale: 0.85, opacity: 0.85 }}
 							whileInView={{ scale: 1.0, opacity: 1 }}
 							transition={{
 								duration: 1,
@@ -89,8 +97,8 @@ const FiveStars = () => {
 							}}
 						>
 							<AiFillStar />
-						</div>
-					</div>
+						</motion.div>
+					</motion.div>
 				))}
 			</div>
 		</>

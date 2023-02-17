@@ -20,7 +20,7 @@ const FetchBreweryByCity = ({ breweries, setBreweries }) => {
 	return (
 		<form
 			onSubmit={fetchBreweries}
-			className='grid gap-4 place-items-center mt-4 h-[10vh]'
+			className='grid gap-4 place-items-center mt-4 h-[10vh] lg:h-[10vh]'
 		>
 			<div className="flex items-center gap-2">
 				<div className=''>
@@ -28,8 +28,8 @@ const FetchBreweryByCity = ({ breweries, setBreweries }) => {
 						type='text'
 						value={userInputCity}
 						onChange={(e) => setUserInputCity(e.target.value)}
-						placeholder='Search for breweries by state'
-						className='border p-4 rounded'
+						placeholder='Search by state...'
+						className='border p-4 rounded bg-medium/50 text-dark w-[20vw] lg:w-[20vw]'
 					/>
 				</div>
 				<button

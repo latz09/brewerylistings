@@ -31,9 +31,9 @@ const BreweryDisplay = ({ breweries }) => {
 
 	return (
 		<div className='grid gap-8 h-full'>
-			<div className="h-[10vh]">
+			<div className="h-[5vh] lg:h-[10vh]">
 				<LocationHeader city={firstBrewery.city} state={firstBrewery.state} />
-				{/* <LocationHeader city={'Minneapolis'} state={'Minnesota'} /> */}
+			
 				
 			</div>
 			<div className="snap-y snap-mandatory h-[70vh]  overflow-scroll scrollbar-hide  ">
@@ -63,9 +63,9 @@ export default BreweryDisplay;
 
 const LocationHeader = ({ city, state }) => {
 	return (
-		<div className='flex space-x-8 items-baseline text-4xl opacity-80'>
-			<div className=''>{city}</div>
-			<div className='opacity-70'>{state}</div>
+		<div className=' text-2xl text-center lg:text-start max-w-5xl mx-auto w-full  lg:text-4xl  text-secondary'>
+			<div className=''>{city}, {state}</div>
+			
 		</div>
 	);
 };
