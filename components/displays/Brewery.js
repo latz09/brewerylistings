@@ -13,8 +13,8 @@ const Brewery = ({
 }) => {
 	return (
 		<motion.div
-			className='grid gap-8 shadow-lg   py-8 px-4 rounded bg-secondary mx-2 lg:mx-0'
-			initial={{ opacity: 0, scale: 0.5 }}
+			className='grid gap-8 shadow-lg text-light   py-8 px-4 rounded backdrop-blur bg-[#F27C02]/30 mx-2 lg:mx-0'
+			initial={{ opacity: 0, scale: 0.9 }}
 			whileInView={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 1 }}
 		>
