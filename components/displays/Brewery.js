@@ -13,7 +13,7 @@ const Brewery = ({
 }) => {
 	return (
 		<motion.div
-			className='grid gap-16 shadow-lg text-light   py-8 px-4 rounded backdrop-blur bg-secondary/60 mx-2 lg:mx-0'
+			className='grid gap-16 shadow-lg text-light   py-8 px-4 rounded backdrop-blur-lg  mx-2 lg:mx-0'
 			initial={{ opacity: 0, scale: 0.9 }}
 			whileInView={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 1 }}
@@ -22,7 +22,7 @@ const Brewery = ({
 				<BreweryTitle name={name} />
 				<FiveStars />
 			</div>
-			<div className='lg:hidden w-full h-full p-20 grid  place-items-center bg-light/60 shadow-md'>
+			<div className='lg:hidden w-full h-full p-20 grid  place-items-center bg-light/10 shadow-md'>
 				MAP
 			</div>
 			<div className='lg:flex gap-8 '>
@@ -36,7 +36,7 @@ const Brewery = ({
 					/>
 				</div>
 
-				<div className='hidden w-full h-full mx-8 p-4 lg:grid place-items-center bg-light/60 shadow-lg'>
+				<div className='hidden w-full h-full mx-8 p-4 lg:grid place-items-center bg-light/10 shadow-lg'>
 					MAP
 				</div>
 			</div>
@@ -64,7 +64,7 @@ const BreweryTitle = ({ name }) => {
 
 const BreweryDetails = ({ name, type, street }) => {
 	return (
-		<div className='text-xl text-medium   tracking-widest grid gap-2 '>
+		<div className='text-xl    tracking-widest grid gap-2 '>
 			<div className='font-semibold tracking-wid  '>{street}</div>
 			<div className=' text-base font-bold  '>
 				{'1.4'} miles away
@@ -81,7 +81,7 @@ const FiveStars = () => {
 				{stars.map((s, i) => (
 					<motion.div
 						key={i}
-						className='text-dark text-xl lg:text-3xl'
+						className='text-primary text-xl lg:text-3xl'
 						initial={{ opacity: 0, scale: 0 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 1.3, delay: 0.2 * i }}

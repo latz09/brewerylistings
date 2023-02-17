@@ -8,7 +8,7 @@ const IconLinks = ({ website, phone, longitude, latitude }) => {
 	console.log(website);
 	return (
 		<>
-			<motion.div className='flex gap-8 text-sm ga items-center opacity-70 text-medium  transition duration-700 mr-4 lg:mr-0 '
+			<motion.div className='flex gap-8 text-sm ga items-center opacity-70 text-primary  transition duration-700 mr-4 lg:mr-0 '
                 initial={{ opacity: 0, }}
                 whileInView={{ opacity: 1,  }}
                 transition={{ duration: 1, delay: .3 }}

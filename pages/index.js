@@ -18,7 +18,7 @@ export default function Home() {
 				placeholder='blur'
 			/>
 
-			<div className='relative h-full  bg-dark/80'>
+			<div className='relative h-full  bg-[#000000]/80'>
 				<div className='py-2  '>
 					<FetchBreweryByCity setBreweries={setBreweries} />
 					{breweries.length > 0 && (
